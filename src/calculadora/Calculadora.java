@@ -1,18 +1,27 @@
 package calculadora;
 
 public class Calculadora {
-	private int number;
+	private int[] numbers;
+	private int operadores = 0;
+	private IOperations operations;
 	
 	public void enter(int i) {
-		number = i;		
+		numbers[this.operadores] = i;
+		this.operadores++;
 	}
 
-	public void add(int i) {
-		number += i;		
+	public void reset() {
+		numbers = null;
+		operadores = 0;		
+	}
+	
+	public int[] apply(){
+		return numbers;
 	}
 
-	public Object result() {
-		return number;
+	public void result( ) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

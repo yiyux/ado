@@ -16,23 +16,10 @@ public class TestCalculadora {
 	@Test
 	public void testSumaDosNumeros() {
 		cal.enter(5);
-		cal.add(3);
-		assertEquals(8, cal.result());
-	}
-	
-	@Test
-	public void testSumaTresNumeros() {
+		cal.operation(op.add());
 		cal.enter(5);
-		cal.add(3);
-		cal.add(2);
 		assertEquals(10, cal.result());
 	}
 	
-	@Test
-	public void testSumaCero() {
-		cal.enter(5);
-		cal.add(0);
-		assertEquals(5, cal.result());
-	}
 	
 }
